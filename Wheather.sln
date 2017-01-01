@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wheather", "Wheather\Wheather.csproj", "{A297467A-FAAE-471D-ABF8-77B8D9CF556E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather", "Wheather\Weather.csproj", "{A297467A-FAAE-471D-ABF8-77B8D9CF556E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

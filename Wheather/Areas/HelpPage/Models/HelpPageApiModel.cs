@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using Wheather.Areas.HelpPage.ModelDescriptions;
+using Weather.Areas.HelpPage.ModelDescriptions;
 
-namespace Wheather.Areas.HelpPage.Models
+namespace Weather.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

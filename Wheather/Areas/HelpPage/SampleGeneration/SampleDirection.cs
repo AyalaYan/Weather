@@ -1,4 +1,4 @@
-namespace Wheather.Areas.HelpPage
+namespace Weather.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

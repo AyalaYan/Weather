@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace Wheather
+namespace Weather
 {
     public static class WebApiConfig
     {

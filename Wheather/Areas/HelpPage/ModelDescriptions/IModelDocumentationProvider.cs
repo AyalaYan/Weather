@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace Wheather.Areas.HelpPage.ModelDescriptions
+namespace Weather.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

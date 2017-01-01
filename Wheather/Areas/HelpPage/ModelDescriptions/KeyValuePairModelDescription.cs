@@ -1,4 +1,4 @@
-namespace Wheather.Areas.HelpPage.ModelDescriptions
+namespace Weather.Areas.HelpPage.ModelDescriptions
 {
     public class KeyValuePairModelDescription : ModelDescription
     {

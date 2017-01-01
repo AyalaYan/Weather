@@ -1,6 +1,6 @@
 using System;
 
-namespace Wheather.Areas.HelpPage.ModelDescriptions
+namespace Weather.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterAnnotation
     {

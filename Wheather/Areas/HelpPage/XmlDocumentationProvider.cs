@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using System.Xml.XPath;
-using Wheather.Areas.HelpPage.ModelDescriptions;
+using Weather.Areas.HelpPage.ModelDescriptions;
 
-namespace Wheather.Areas.HelpPage
+namespace Weather.Areas.HelpPage
 {
     /// <summary>
     /// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.

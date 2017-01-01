@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using Wheather.Areas.HelpPage.ModelDescriptions;
-using Wheather.Areas.HelpPage.Models;
+using Weather.Areas.HelpPage.ModelDescriptions;
+using Weather.Areas.HelpPage.Models;
 
-namespace Wheather.Areas.HelpPage
+namespace Weather.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

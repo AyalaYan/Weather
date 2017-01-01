@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using Wheather.Areas.HelpPage.ModelDescriptions;
-using Wheather.Areas.HelpPage.Models;
+using Weather.Areas.HelpPage.ModelDescriptions;
+using Weather.Areas.HelpPage.Models;
 
-namespace Wheather.Areas.HelpPage.Controllers
+namespace Weather.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace Wheather.Areas.HelpPage
+namespace Weather.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {
