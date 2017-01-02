@@ -1,13 +1,21 @@
 ﻿(function () {
     'use strict';
-
-    angular.module('app', [
+    angular.module('wtr.home', []);
+    angular.module('wtr.weather', []);
+    angular.module('wtr.services', []);
+     angular.module('wtr.directives', []);
+    angular.module('wtrApp', [
         // Angular modules 
-        'ngRoute'
+        'ngRoute',
 
         // Custom modules 
-
+         'wtr.weather',
+         'wtr.home',
+         'wtr.services',
+         'wtr.directives',
         // 3rd Party Modules
-        
-    ]);
+
+    ]).run(['$rootScope', 'wtrCitiesData','wtrData', function ($rootScope, wtrCitiesData,wtrData) {
+     
+    }]);
 })();

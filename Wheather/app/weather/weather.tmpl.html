@@ -1,0 +1,51 @@
+﻿<div class="weather-section container">
+    <div>
+        <br />
+        <div ng-show="weatherVm.weatherData">
+            <h1>{{weatherVm.weatherData.location.city}}</h1>
+            <h3>{{  weatherVm.currentDate| date:'EEE'}}</h3>
+            <h4>{{weatherVm.weatherData.current_observation.icon}}</h4>
+            <br />
+        </div>
+        <div class="row">
+            <img class="col-md-1 " ng-src='{{weatherVm.weatherData.current_observation.icon_url}}' />
+            <div class="col-md-4 row div-type-temp" ng-show="weatherVm.weatherData">
+                <h1 class="h1-temp-weather display-inline"
+                    ng-if="weatherVm.tempType=='c'">
+                    {{weatherVm.weatherData.current_observation.temp_c}}
+                </h1>
+                <h1 class="h1-temp-weather display-inline"
+                    ng-if="weatherVm.tempType=='f'">
+                    {{weatherVm.weatherData.current_observation.temp_f}}
+                </h1>
+                &nbsp;&nbsp;
+                <h5 class="vertical-top display-inline cursor-pointer"
+                    ng-click="weatherVm.changeTempType('c')" ng-class="{'font-bold': weatherVm.tempType=='c'}">
+                    C`
+                </h5>
+                <h5 class="display-inline vertical-top">|</h5>
+                <h5 ng-click="weatherVm.changeTempType('f')" class="vertical-top display-inline cursor-pointer"
+                    ng-class="{'font-bold': weatherVm.tempType=='f'}">
+                    F`
+                </h5>
+            </div>
+            <div class="col-md-5 row pull-right" ng-show="weatherVm.weatherData">
+                <h3>Precipitation:   {{weatherVm.weatherData.current_observation.precip_today_metric}}</h3>
+                <h3>humidity:   {{weatherVm.weatherData.current_observation.relative_humidity}}</h3>
+                <h3>Wind:   {{weatherVm.weatherData.current_observation.wind_kph}} Km/h</h3>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-5 pull-right" ng-show="weatherVm.weatherData">
+                <input type="button" class="btn" ng-click="weatherVm.updateChartTemp('Temperature')" ng-class="{'btn-default': weatherVm.chartType!='Temperature'}" value="Temperature" />
+                <input type="button" class="btn" ng-click="weatherVm.updateChartTemp('Precipitation')" ng-class="{'btn-default': weatherVm.chartType!='Precipitation'}" value="Precipitation" />
+                <input type="button" class="btn" ng-click="weatherVm.updateChartTemp('Wind')" ng-class="{'btn-default': weatherVm.chartType!='Wind'}" value="Wind" />
+            </div>
+        </div>
+        <div id="chartTemp" style="height: 250px;"></div>
+        <div class="row">
+            <wtr-forecast ng-repeat="tempDay in weatherVm.weatherData.forecast.simpleforecast.forecastday" class="col-md-3 "></wtr-forecast>
+        </div>
+    </div>
+</div>

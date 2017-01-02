@@ -1,11 +1,44 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="wtrApp">
 <head>
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/ui-bootstrap-csp.css" rel="stylesheet" />
+    <link href="../Content/weather-icons-wind.css" rel="stylesheet" />
+    <link href="wtr.style.min.css" rel="stylesheet" />
+    <link href="../Content/weather-icons.css" rel="stylesheet" />
+    <link href="home/home.style.min.css" rel="stylesheet" />
+    <link href="weather/weather.style.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 </head>
 <body>
+    <div>
+        <nav class="navbar navbar-inverse navbar-weather">
+            <div class="container pull-right">
+                <a href="#/home" class="a-weather">Home</a>
+            </div>
+        </nav>
+    </div>
+    <div ng-view>
+
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="../Scripts/lodash.js"></script>
+    <script src="../Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="../Scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="app.mdl.js"></script>
+    <script src="app.route.js"></script>
+    <script src="common/services/wtr.city.srv.js"></script>
+    <script src="common/services/wtr.weatherData.srv.js"></script>
+    <script src="common/directives/wtr.dirct.js"></script>
+    <script src="home/home.ctrl.js"></script>
+    <script src="weather/weather.ctrl.js"></script>
+    
 
 </body>
 </html>
-     

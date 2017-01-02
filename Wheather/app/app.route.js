@@ -1,17 +1,22 @@
 ﻿(function () {
     'use strict';
+    angular.module('wtrApp')
+    .config(['$routeProvider', function config($routeProvider) {
+        $routeProvider
+          .when('/home', {
+              controller: 'homeCtrl',
+              templateUrl: 'home/home.tmpl.html',
+              controllerAs: 'homeVm'
+          })
+               .when('/weather/:city/:stateCode/', {
+                   controller: 'weatherCtrl',
+                   controllerAs: 'weatherVm',
+                   templateUrl: 'weather/weather.tmpl.html'
+               })
 
-    angular
-        .module('app')
-        .controller('app', app);
+            .otherwise({
+                redirectTo: '/home'
+            });
+    }]);
 
-    app.$inject = ['$scope']; 
-
-    function app($scope) {
-        $scope.title = 'app';
-
-        activate();
-
-        function activate() { }
-    }
 })();

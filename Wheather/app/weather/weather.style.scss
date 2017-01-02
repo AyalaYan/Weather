@@ -1,0 +1,29 @@
+﻿@import "../common/wtr.vars.scss";
+
+.weather-section {
+    h1, h2, h3, h4, h5, span, label,input[value] {
+        margin-top: 5px !important;
+        margin-bottom: 0px !important;
+        font-family: $font-family-base;
+    }
+
+    .h1-temp-weather {
+        font-size: 48px;
+    }
+
+    .div-type-temp {
+        margin-left: 10px;
+    }
+
+    .span-temp-type {
+        font-size: 10px;
+        vertical-align: top !important;
+    }
+
+    .img-temp {
+        width: 60px;
+        height: 60px;
+        margin-top: -10px;
+        margin-bottom: -5px;
+    }
+}

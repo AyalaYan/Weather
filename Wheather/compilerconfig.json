@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "app/wtr.style.css",
+    "inputFile": "app/wtr.style.scss"
+  },
+  {
+    "outputFile": "app/common/wtr.vars.css",
+    "inputFile": "app/common/wtr.vars.scss"
+  },
+  {
+    "outputFile": "app/home/home.style.css",
+    "inputFile": "app/home/home.style.scss"
+  },
+  {
+    "outputFile": "app/weather/weather.style.css",
+    "inputFile": "app/weather/weather.style.scss"
+  }
+]

@@ -1,0 +1,25 @@
+﻿@import "../common/wtr.vars.scss";
+
+.home-section {
+    .h-home {
+        color: $color-yellow-base;
+        font-family: $font-family-base;
+        font-size: 58px;
+    }
+
+    .div-home {
+        margin-top: 150px !important;
+        text-align: center !important;
+    }
+
+    .span-home {
+        color: $color-base;
+        font-family: $font-family-base;
+        font-size: 20px;
+    }
+
+    .span-message {
+        color: $color-base;
+        font-family: $font-family-base;
+    }
+}

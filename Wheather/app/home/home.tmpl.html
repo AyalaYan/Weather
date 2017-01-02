@@ -1,0 +1,15 @@
+﻿<div class="home-section">
+    <div class="container div-home">
+        <span class="h-home"> The Forecast For The Next Week... </span>
+        <br /><br /><br /><br />
+        <span class="span-home">
+            Enter City Name:
+        </span>
+        <br /><br />
+       <input ng-model="homeVm.cityName" />
+        <br /><br />
+        <span class="span-message">{{homeVm.resultSearchMessage}}</span>
+        <a ng-repeat="city in homeVm.cities" ng-href="#/weather/{{city.city}}/{{city.stateCode}}"> {{city.city}}</a>
+    </div>
+</div>
+

@@ -1,2 +1,31 @@
-﻿body {
+﻿@import "common/wtr.vars.scss";
+
+body {
+    .navbar-weather {
+        background: $color-base !important;
+        border-color: $color-base !important;
+    }
+
+    .a-weather {
+        color: $color-yellow-base !important;
+        font-family: $font-family-base;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .font-bold {
+        font-weight: bold;
+    }
+
+    .cursor-pointer {
+        cursor: pointer;
+    }
+
+    .display-inline {
+        display: inline-block;
+    }
+
+    .vertical-top {
+        vertical-align: top;
+    }
 }

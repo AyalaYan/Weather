@@ -1,0 +1,20 @@
+﻿<div class="text-center"> 
+    <h4 class="font-bold" >{{tempDay.date.weekday_short}}</h4>
+    <br />
+    <img ng-src="{{tempDay.icon_url}}" class="img-temp"/>
+    <br />
+    <span class="display-inline " ng-if="weatherVm.tempType=='c'">
+        {{tempDay.high.celsius}}<span class="span-temp-type">C`</span>
+    </span>
+    <span class="display-inline" ng-if="weatherVm.tempType=='f'">
+        {{tempDay.high.fahrenheit}}<span class="span-temp-type">F`</span>
+    </span>
+    <span class="display-inline" ng-if="weatherVm.tempType=='c'">
+        {{tempDay.low.celsius}}
+        <span class="span-temp-type">C`</span>
+    </span>
+    <span class="display-inline" ng-if="weatherVm.tempType=='f'">
+        {{tempDay.low.fahrenheit}}
+        <span class="span-temp-type">F`</span>
+    </span>
+</div>
