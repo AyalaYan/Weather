@@ -20,6 +20,7 @@
         /*****************************************************
          *                  METHODS                          *
         *****************************************************/
+        //Change the temperature type from C to F and the opposite
         vm.changeTempType = function (tempType) {
             if (vm.tempType != tempType) {
                 vm.tempType = tempType;
@@ -29,7 +30,7 @@
                 vm.tempType = tempType;
             }
         }
-
+        //paint the weather chart 
         vm.updateChartTemp = function (chartType) {
             vm.chartType = chartType;
             $('#chartTemp').html('');
@@ -112,7 +113,7 @@
         $scope.$on('$destroy', function () {
             vm.stop();
         });
-
+        //load weather data from api
         function loadWeatherData() {
             wtrData.getWeatherByCity(vm.city, vm.stateCode).then(
                     function (data) {
