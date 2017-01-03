@@ -1,7 +1,6 @@
 ﻿(function () {
     'use strict';
-    angular
-         .module('wtr.home')
+    angular.module('wtr.home')
          .controller('homeCtrl', homeCtrl);
 
     homeCtrl.$inject = ['$scope', '$rootScope', 'wtrCitiesData'];
@@ -21,10 +20,9 @@
             vm.resultSearchMessage = null;
             if (newVal && newVal.length > 1) {
                 vm.cities = wtrCitiesData.searchCitiesByKey(newVal);
-                if (!vm.cities || vm.cities == null || vm.cities == undefined || vm.cities.length < 1) {
+                if (vm.cities == null || vm.cities == undefined || vm.cities.length < 1) {
                     vm.resultSearchMessage = 'No cities found';
                 }
-
             }
             else {
                 vm.cities = null;
@@ -35,13 +33,9 @@
    *               METHODS - PRIVATE                   *
    *****************************************************/
         function init() { }
-
-
         /*****************************************************
       *                  EXECUTIONS                       *
       *****************************************************/
-
         init();
-
     }
 })();

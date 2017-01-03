@@ -3,12 +3,12 @@
         <br />
         <div ng-show="weatherVm.weatherData">
             <h1>{{weatherVm.weatherData.location.city}}</h1>
-            <h3>{{  weatherVm.currentDate| date:'EEE'}}</h3>
-            <h4>{{weatherVm.weatherData.current_observation.icon}}</h4>
+            <h3>{{weatherVm.weatherData.current_observation.observation_time_rfc822.substr(0,3)}}</h3>
+            <h4>{{weatherVm.weatherData.current_observation.weather}}</h4>
             <br />
         </div>
         <div class="row">
-            <img class="col-md-1 " ng-src='{{weatherVm.weatherData.current_observation.icon_url}}' />
+            <img class="col-md-1 img-weather-icon" ng-src='{{weatherVm.weatherData.current_observation.icon_url}}' />
             <div class="col-md-4 row div-type-temp" ng-show="weatherVm.weatherData">
                 <h1 class="h1-temp-weather display-inline"
                     ng-if="weatherVm.tempType=='c'">
@@ -21,12 +21,12 @@
                 &nbsp;&nbsp;
                 <h5 class="vertical-top display-inline cursor-pointer"
                     ng-click="weatherVm.changeTempType('c')" ng-class="{'font-bold': weatherVm.tempType=='c'}">
-                    C`
+                    C&deg;
                 </h5>
                 <h5 class="display-inline vertical-top">|</h5>
                 <h5 ng-click="weatherVm.changeTempType('f')" class="vertical-top display-inline cursor-pointer"
                     ng-class="{'font-bold': weatherVm.tempType=='f'}">
-                    F`
+                    F&deg;
                 </h5>
             </div>
             <div class="col-md-5 row pull-right" ng-show="weatherVm.weatherData">
@@ -43,7 +43,7 @@
                 <input type="button" class="btn" ng-click="weatherVm.updateChartTemp('Wind')" ng-class="{'btn-default': weatherVm.chartType!='Wind'}" value="Wind" />
             </div>
         </div>
-        <div id="chartTemp" style="height: 250px;"></div>
+        <div id="chartTemp" class="weather-chart"></div>
         <div class="row">
             <wtr-forecast ng-repeat="tempDay in weatherVm.weatherData.forecast.simpleforecast.forecastday" class="col-md-3 "></wtr-forecast>
         </div>

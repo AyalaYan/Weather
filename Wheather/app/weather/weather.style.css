@@ -19,3 +19,10 @@
   margin-top: -10px;
   margin-bottom: -5px; }
 
+.weather-section .img-weather-icon {
+  min-width: 130px !important;
+  margin-top: -20px; }
+
+.weather-section .weather-chart {
+  height: 250px !important; }
+

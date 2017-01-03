@@ -4,17 +4,17 @@
     <img ng-src="{{tempDay.icon_url}}" class="img-temp"/>
     <br />
     <span class="display-inline " ng-if="weatherVm.tempType=='c'">
-        {{tempDay.high.celsius}}<span class="span-temp-type">C`</span>
+        {{tempDay.high.celsius}}<span class="span-temp-type">C&deg;</span>
     </span>
     <span class="display-inline" ng-if="weatherVm.tempType=='f'">
-        {{tempDay.high.fahrenheit}}<span class="span-temp-type">F`</span>
+        {{tempDay.high.fahrenheit}}<span class="span-temp-type">F&deg;</span>
     </span>
     <span class="display-inline" ng-if="weatherVm.tempType=='c'">
         {{tempDay.low.celsius}}
-        <span class="span-temp-type">C`</span>
+        <span class="span-temp-type">C&deg;</span>
     </span>
     <span class="display-inline" ng-if="weatherVm.tempType=='f'">
         {{tempDay.low.fahrenheit}}
-        <span class="span-temp-type">F`</span>
+        <span class="span-temp-type">F&deg;</span>
     </span>
 </div>

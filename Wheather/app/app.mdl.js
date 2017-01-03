@@ -7,15 +7,11 @@
     angular.module('wtrApp', [
         // Angular modules 
         'ngRoute',
-
         // Custom modules 
          'wtr.weather',
          'wtr.home',
          'wtr.services',
          'wtr.directives',
-        // 3rd Party Modules
-
-    ]).run(['$rootScope', 'wtrCitiesData','wtrData', function ($rootScope, wtrCitiesData,wtrData) {
-     
+    ]).run(['$rootScope', 'wtrCitiesData','wtrData', function ($rootScope, wtrCitiesData,wtrData) {   
     }]);
 })();

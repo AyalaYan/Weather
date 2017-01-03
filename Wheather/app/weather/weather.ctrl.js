@@ -13,7 +13,6 @@
         vm.city = $routeParams.city;
         vm.stateCode = $routeParams.stateCode;
         vm.weatherData = null;
-        vm.currentDate = new Date();
         vm.tempType = 'c';
         vm.chartType = 'Temperature';
         var promise;
@@ -42,13 +41,13 @@
                         angular.forEach(vm.weatherData.hourly_forecast, function (hourlyForecast) {
                             tempData.push({ "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.temp.metric });
                         })
-                        label = 'C`';
+                        label = 'C' + decodeURI('%C2%B0');
                     }
                     else {
                         angular.forEach(vm.weatherData.hourly_forecast, function (hourlyForecast) {
                             tempData.push({ "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.temp.english });
                         })
-                        label = 'F`';
+                        label = 'F`' + decodeURI('%C2%B0');
                     }
                     break;
                 case 'Precipitation':
@@ -77,7 +76,6 @@
                         angular.forEach(vm.weatherData.hourly_forecast, function (hourlyForecast) {
                             tempData.push({ "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.wspd.english });
                         })
-
                     }
                     label = 'Wind';
                     break;
@@ -103,9 +101,8 @@
         vm.start = function () {
             // stops any running interval to avoid two intervals running at the same time
             vm.stop();
-
             // store the interval promise
-            promise = $interval(loadWeatherData, 30000);
+            promise = $interval(loadWeatherData, 50000);
         };
 
         vm.stop = function () {

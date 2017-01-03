@@ -1,7 +1,7 @@
 ﻿@import "../common/wtr.vars.scss";
 
 .weather-section {
-    h1, h2, h3, h4, h5, span, label,input[value] {
+    h1, h2, h3, h4, h5, span, label, input[value] {
         margin-top: 5px !important;
         margin-bottom: 0px !important;
         font-family: $font-family-base;
@@ -25,5 +25,14 @@
         height: 60px;
         margin-top: -10px;
         margin-bottom: -5px;
+    }
+
+    .img-weather-icon {
+        min-width: 130px !important;
+        margin-top: -20px;
+    }
+
+    .weather-chart {
+        height: 250px !important;
     }
 }
