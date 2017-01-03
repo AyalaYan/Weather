@@ -7,7 +7,7 @@
         </span>
         <br /><br />
        <input ng-model="homeVm.cityName" />
-        <br /><br />
+        <br /><br /> 
         <span class="span-message">{{homeVm.resultSearchMessage}}</span>
         <a ng-repeat="city in homeVm.cities" ng-href="#/weather/{{city.city}}/{{city.stateCode}}"> {{city.city}}</a>
     </div>
