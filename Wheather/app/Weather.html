@@ -18,23 +18,30 @@
             </div>
         </nav>
     </div>
-    <div ng-view> </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <div ng-view>
+    </div>
+    <!-- global scripts -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src="../Scripts/lodash.js"></script>
+
+    <!-- angular scripts -->
     <script src="../Scripts/angular.js"></script>
     <script src="../Scripts/angular-route.js"></script>
-    <script src="../Scripts/lodash.js"></script>
-    <script src="../Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
-    <script src="../Scripts/angular-ui/ui-bootstrap.js"></script>
+  
+    <!-- app scripts -->
     <script src="app.mdl.js"></script>
     <script src="app.route.js"></script>
+
+    <!-- services, filters and directives scripts -->
     <script src="common/services/wtr.city.srv.js"></script>
     <script src="common/services/wtr.weatherData.srv.js"></script>
     <script src="common/directives/wtr.dirct.js"></script>
+
+    <!-- cntrollers scripts -->
     <script src="home/home.ctrl.js"></script>
     <script src="weather/weather.ctrl.js"></script>
-    
+
 
 </body>
 </html>
