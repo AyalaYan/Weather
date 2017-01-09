@@ -20,6 +20,12 @@
         /*****************************************************
         *                  METHODS                          *
         *****************************************************/
+        /*
+         * @description: search cities
+         * @event: home> search city
+         * @param: {keys:string}, find only city contains keys
+         * @returns: {searchCities: Array} array of cities
+         */
         function searchCitiesByKey(keys) {
             keys = _.lowerCase(keys);
             searchCities = _.filter(Cities, function (cityinCities) {
@@ -30,6 +36,9 @@
         /*****************************************************
     *               METHODS - PRIVATE                   *
     *****************************************************/
+        /*
+         * @event: on init this service
+         */
         function initCities() {
             var defered = $q.defer();
             $http.get('/app/USACities.json').then(

@@ -30,37 +30,41 @@
                 vm.tempType = tempType;
             }
         }
-        //paint the weather chart 
+            /*
+         * @description: paint the weather chart 
+         * @event: on buttons click: Temperature,Precipitation,Wind or change tempType
+         * @param: {chartType:string} which type to show
+         */
         vm.updateChartTemp = function (chartType) {
             vm.chartType = chartType;
-            $('#chartTemp').html('');
+            angular.element('#chartTemp').html('');
             var tempData = [];
             var label = '';
             switch (chartType) {
                 case 'Temperature':
                     if (vm.tempType == 'c') {
-                        angular.forEach(vm.weatherData.hourly_forecast, function (hourlyForecast) {
-                            tempData.push({ "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.temp.metric });
+                        tempData = _.map(vm.weatherData.hourly_forecast, function (hourlyForecast) {
+                            return { "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.temp.metric };
                         })
                         label = 'C' + decodeURI('%C2%B0');
                     }
                     else {
-                        angular.forEach(vm.weatherData.hourly_forecast, function (hourlyForecast) {
-                            tempData.push({ "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.temp.english });
+                        tempData = _.map(vm.weatherData.hourly_forecast, function (hourlyForecast) {
+                            return { "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.temp.english };
                         })
                         label = 'F`' + decodeURI('%C2%B0');
                     }
                     break;
                 case 'Precipitation':
                     if (vm.tempType == 'c') {
-                        angular.forEach(vm.weatherData.hourly_forecast, function (hourlyForecast) {
-                            tempData.push({ "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.qpf.metric });
+                        tempData = _.map(vm.weatherData.hourly_forecast, function (hourlyForecast) {
+                            return { "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.qpf.metric };
                         })
 
                     }
                     else {
-                        angular.forEach(vm.weatherData.hourly_forecast, function (hourlyForecast) {
-                            tempData.push({ "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.qpf.english });
+                        tempData=  _.map(vm.weatherData.hourly_forecast, function (hourlyForecast) {
+                            return { "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.qpf.english };
                         })
 
                     }
@@ -68,14 +72,14 @@
                     break;
                 case 'Wind':
                     if (vm.tempType == 'c') {
-                        angular.forEach(vm.weatherData.hourly_forecast, function (hourlyForecast) {
-                            tempData.push({ "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.wspd.metric });
+                        tempData = _.map(vm.weatherData.hourly_forecast, function (hourlyForecast) {
+                            return { "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.wspd.metric };
                         })
 
                     }
                     else {
-                        angular.forEach(vm.weatherData.hourly_forecast, function (hourlyForecast) {
-                            tempData.push({ "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.wspd.english });
+                        tempData = _.map(vm.weatherData.hourly_forecast, function (hourlyForecast) {
+                            return { "time": hourlyForecast.FCTTIME.civil, "value": hourlyForecast.wspd.english };
                         })
                     }
                     label = 'Wind';
@@ -110,9 +114,6 @@
             $interval.cancel(promise);
         };
 
-        $scope.$on('$destroy', function () {
-            vm.stop();
-        });
         //load weather data from api
         function loadWeatherData() {
             wtrData.getWeatherByCity(vm.city, vm.stateCode).then(
@@ -130,5 +131,8 @@
         *                  EXECUTIONS                       *
         *****************************************************/
         init();
+        $scope.$on('$destroy', function () {
+            vm.stop();
+        });
     }
 })();

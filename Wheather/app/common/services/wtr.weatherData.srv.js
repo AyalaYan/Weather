@@ -24,6 +24,13 @@
         *                  METHODS                          *
         *****************************************************/
 
+       /*
+        * @description: get data of one city
+        * @event: weather>loadWeatherData
+        * @param: {city: string} 
+        * @param: {stateCode: int} id of state
+        * @returns: promise<WeatherData (json)>
+        */
         function getWeatherByCity(city, stateCode) {
             var defered = $q.defer();
 
@@ -31,7 +38,6 @@
             .then(
                 function (response) {
                     defered.resolve(response.data);
-
                 },
                  function (error) { defered.resolve(false); }
                 )
